@@ -1,2 +1,1 @@
-# mlops-aug24cr
-repo for MLOps
+# testing_dev_mlops
