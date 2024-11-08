@@ -19,8 +19,8 @@ jobs:
       test_data:
         mode: upload
     code: src/data_prep
-    environment: chandraml:AzureML-sklearn-1.0-ubuntu20.04-py38-cpu@latest
-    compute: chandraml:cpu-cluster
+    environment: azureml:AzureML-sklearn-1.0-ubuntu20.04-py38-cpu@latest
+    compute: azureml:cpu-cluster
     command: >-
       python prep.py 
       --data ${{inputs.data}} 
@@ -37,8 +37,8 @@ jobs:
     outputs:
       model: 
     code: src/train
-    environment: chandraml:AzureML-sklearn-1.0-ubuntu20.04-py38-cpu@latest
-    compute: chandraml:cpu-cluster
+    environment: azureml:AzureML-sklearn-1.0-ubuntu20.04-py38-cpu@latest
+    compute: azureml:cpu-cluster
     command: >-
       python train.py 
       --train_data ${{inputs.train_data}} 
