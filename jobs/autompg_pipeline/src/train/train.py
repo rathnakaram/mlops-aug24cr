@@ -43,8 +43,8 @@ def main():
     car_mpg_train = pd.read_csv(select_first_file(args.train_data))  # Read the training data
     car_mpg_test = pd.read_csv(select_first_file(args.test_data)) # Read the test data
 
-    target = 'mpg'
-    numeric_features = ['cyl','disp','hp','wt','acc','yr','origin','car_type',]
+    target = 'sales'
+    numeric_features = ['city','tv','radio','newspaper',]
 
     # Extract the features from the training data
     X_train = car_mpg_train.drop(columns=[target]) 
